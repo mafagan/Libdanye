@@ -1,3 +1,7 @@
+# Ignored dir
+test
+bin
+
 # Compiled Object files
 *.slo
 *.lo
