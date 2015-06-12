@@ -13,8 +13,8 @@ namespace danye{
 
         private:
 
-            noncpyable(const noncpyable &){}
-            const noncpyable& operator=(const noncpyable&){}
-    }
+            noncpyable(const noncpyable &);
+            const noncpyable& operator=(const noncpyable&);
+    };
 }
 #endif
