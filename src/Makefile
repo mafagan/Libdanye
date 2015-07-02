@@ -12,7 +12,7 @@ main.o: main.cpp
 util.o: util.cpp util.h
 	$(GCC) $(CFLAGS) -c $< -o $@
 
-Logging.o: Logging.cpp Logging.h
+Logging.o: Logging.cpp Logging.hpp
 	$(GCC) $(CFLAGS) -c $< -o $@
 
 

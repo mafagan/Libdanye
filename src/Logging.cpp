@@ -1,11 +1,25 @@
 
-#include "Logging.h"
+#include "Logging.hpp"
 
 using namespace danye;
 
 Logging::Logging()
 {
-    this->_msgCount = 0;
+}
+
+inline void Logging::log(LOG_TYPE type, LOG_LEVEL level, string data)
+{
+    static const char* const level_buffer[] = {"INFO", "DEBUG", "WARN", "ERROR"};
+
+    if(type == LOG){
+
+    }else if(type == FILE_LOG){
+
+    }else if(type == SYS_LOG){
+
+    }else{
+
+    }
 }
 
 Logging::~Logging()
