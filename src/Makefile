@@ -9,7 +9,7 @@ danye: $(OBJS)
 main.o: main.cpp
 	$(GCC) $(CFLAGS) -c $< -o $@
 
-util.o: util.cpp util.h
+util.o: util.cpp util.hpp
 	$(GCC) $(CFLAGS) -c $< -o $@
 
 Logging.o: Logging.cpp Logging.hpp

@@ -5,8 +5,8 @@
 #include <iostream>
 #include <fstream>
 
-#include <unistd.H>
-#include "util.h"
+#include <unistd.h>
+#include "util.hpp"
 
 using namespace std;
 
