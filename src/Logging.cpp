@@ -1,7 +1,6 @@
 
 #include "Logging.hpp"
 
-using namespace danye;
 
 Logging::Logging()
 {

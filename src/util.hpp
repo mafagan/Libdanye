@@ -3,18 +3,16 @@
 
 #include<stdio.h>
 
-namespace danye{
 
-    class noncpyable{
-        protected:
+class noncpyable{
+protected:
 
-            noncpyable(){}
-            ~noncpyable(){}
+    noncpyable(){}
+    ~noncpyable(){}
 
-        private:
+private:
 
-            noncpyable(const noncpyable &);
-            const noncpyable& operator=(const noncpyable&);
-    };
-}
+    noncpyable(const noncpyable &);
+    const noncpyable& operator=(const noncpyable&);
+};
 #endif

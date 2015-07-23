@@ -28,7 +28,7 @@ public:
     Logging();
 
     inline void log(LOG_TYPE type, LOG_LEVEL level, string data);
-
+    Logging& operator=(const Logging &other);
     ~Logging();
 private:
     Logging(const Logging &other);

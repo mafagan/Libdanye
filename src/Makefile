@@ -1,5 +1,5 @@
 GCC = g++
-CFLAGS = -Wall -g
+CFLAGS = -O2 -Wall -g
 LIBS = -lpthread
 OBJS = EventManager.o util.o Logging.o main.o
 

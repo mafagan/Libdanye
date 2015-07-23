@@ -1,7 +1,6 @@
 
 #include "util.hpp"
 
-using namespace danye;
 
 noncpyable::noncpyable(const noncpyable &){}
 
