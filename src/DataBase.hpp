@@ -3,15 +3,21 @@
 
 
 #include "Event.hpp"
+#include "Epoll.hpp"
+#include "Configuration.hpp"
 
 #include <queue>
 #include <vector>
 
+#ifndef DY_FD_MAX
+#define DY_FD_MAX 1024
+#endif
+
 class DataBase{
 private:
-
+    Epoll *dy_epoll;
 public:
-    DataBase();
+    DataBase(Configuration *cfg);
 
     bool addEvent(Event *ePtr);
 
