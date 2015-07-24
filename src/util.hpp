@@ -15,4 +15,7 @@ private:
     noncpyable(const noncpyable &);
     const noncpyable& operator=(const noncpyable&);
 };
+
+bool make_socket_non_blocking(int fd);
+
 #endif

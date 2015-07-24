@@ -1,13 +1,18 @@
+#include "Event.hpp"
+#include "util.hpp"
 
-class EventManager{
+class EventManager:public noncpyable{
 private:
+
     EventManager();
     static EventManager *emInstance;
 
 public:
     static EventManager* GetInstance();
 
-    bool eventRegister();
+    bool eventRegister(Event *eptr);
 
-    bool eventCancel();
+    bool eventCancel(Event *eptr);
+
+    void run();
 };

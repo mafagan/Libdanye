@@ -1,7 +1,7 @@
 GCC = g++
 CFLAGS = -O2 -Wall -g
 LIBS = -lpthread
-OBJS = EventManager.o util.o Logging.o main.o
+OBJS = DataBase.o EventManager.o util.o Logging.o main.o
 
 danye: $(OBJS)
 	$(GCC) $(CFLAGS) $(OBJS) -o $@
@@ -18,6 +18,8 @@ Logging.o: Logging.cpp Logging.hpp
 EventManager.o: EventManager.cpp EventManager.hpp
 	$(GCC) $(CFLAGS) -c $< -o $@
 
+DataBase.o: DataBase.cpp DataBase.hpp
+	$(GCC) $(CFLAGS) -c $< -o $@
 
 .PHONY: clean
 
