@@ -1,14 +1,10 @@
 #ifndef _CONFIGURATION_H_
 #define _CONFIGURATION_H_
 
-class Configuration{
-private:
+struct Configuration{
     int max_fd_size;
-public:
-    Configuration();
 
-    void set_max_fd_size(int max_fd_size);
-    int get_max_fd_size();
+    Configuration():max_fd_size(1024){}
 };
 
 #endif

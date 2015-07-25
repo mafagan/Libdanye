@@ -2,11 +2,16 @@
 #define _EVENT_H_
 
 class Event{
-private:
-
 protected:
+    int kind_id;
+    int event_id;
 
 public:
+    const static int SIGNAL = 1;
+    const static int TIMER = 2;
+    const static int IO = 3;
+
+    virtual int getKindId()=0;
     virtual ~Event()=0;
 };
 
