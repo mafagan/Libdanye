@@ -11,6 +11,11 @@ public:
     const static int TIMER = 2;
     const static int IO = 3;
 
+    const static int TIMEOUT = 0x01;
+    const static int READ = 0x02;
+    const static int WRITE = 0x04;
+    const static int SIGNAL = 0x08;
+
     virtual int getKindId()=0;
     virtual ~Event()=0;
 };

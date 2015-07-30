@@ -14,6 +14,7 @@ void EventManager::init(Configuration *cfg)
     this->dy_epoll = new Epoll(cfg->max_fd_size);
     this->ready_list = new std::list<Event*>;
     this->timerHeap = new std::vector<EventTimer*>;
+    this->loop_flag = ATOMIC_FLAG_INIT;
 }
 
 bool EventManager::eventTimerRegister(EventTimer *ePtr)
@@ -52,12 +53,18 @@ int EventManager::getNextTimeout()
 
 void EventManager::run()
 {
+    loop_flag.test_and_set();
 
-    for(;;){
+    while(!loop_flag.test_and_set()){
         dy_epoll->wait(cfg.max_fd_size, getNextTimeout());
 
     }
+
 }
 
+void EventManager::stop()
+{
+    //TODO
+}
 
 EventManager* EventManager::emInstance = new EventManager;

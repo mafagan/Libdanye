@@ -1,5 +1,5 @@
-#ifndef _EVMANAGER_
-#define _EVMANAGER_
+#ifndef _EVMANAGER_H_
+#define _EVMANAGER_H_
 
 #include "Event.hpp"
 #include "util.hpp"
@@ -12,6 +12,7 @@
 #include <sys/epoll.h>
 #include <vector>
 #include <ctime>
+#include <atomic>
 
 class EventManager:public noncpyable{
 private:
@@ -21,6 +22,9 @@ private:
     std::list<Event*> *ready_list;
     std::vector<EventTimer*> *timerHeap;
 
+    std::atomic_flag loop_flag;
+
+    /* constructor */
     EventManager();
     static EventManager *emInstance;
 
@@ -34,6 +38,8 @@ public:
 
     int getNextTimeout();
     void run();
+
+    void stop();
 };
 
 
